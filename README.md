@@ -30,7 +30,7 @@ source venv/bin/activate # for Linux
 2. Install the required packages using:
 
 ```bash
-pi3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 3. Ensure that your environment has the necessary libraries installed.
@@ -78,5 +78,5 @@ Answer: The least favorable rating among the five options is 3, which represents
 - Optimizing retrieval speed and reducing latency for larger datasets.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
