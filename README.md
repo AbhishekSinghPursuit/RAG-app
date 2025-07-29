@@ -19,7 +19,10 @@ Before running the app, make sure you have the following installed:
 - **Ollama** (for embeddings)
 
 ## Setup
-1. Clone the repository or download the project files.
+1. Clone the repository or download the project files:
+```bash
+git clone https://github.com/AbhishekSinghPursuit/RAG-app.git
+```
 2. Create a virtual env
 ```bash
 python3 -m venv venv
@@ -27,17 +30,35 @@ source venv/bin/activate # for Linux
 ./venv/Scripts/activate # for windows
 ```
 
-2. Install the required packages using:
+3. Install the required packages using:
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
-3. Ensure that your environment has the necessary libraries installed.
+4. Ensure that your environment has the necessary libraries installed.
 
-4. Make sure you have realistic_restaurant_reviews.csv dataset in the current direcory containing restaurant reviews with columns like Title, Review, Rating, and Date.
+5. Make sure you have realistic_restaurant_reviews.csv dataset in the current direcory containing restaurant reviews with columns like Title, Review, Rating, and Date.
 
-5. Run the application with:
+6. Install Ollama
+  - For windows, go to this url: https://ollama.com/download
+  - For Linux, run command:
+    ```bash
+    curl -fsSL https://ollama.com/install.sh | sh
+    ```
+
+7. After installing Ollama, confirm the installation:
+   ```bash
+   ollama --version
+   ollama list      # no models are there
+   ```
+8. Install the *TinyLLaMA* and *mxbai-embed-large* using ollama
+   ```bash
+   ollama pull tinyllama:latest
+   ollama pull mxbai-embed-large
+   ollama list
+   ```
+10. Run the application with:
 
 ```bash
 python3 main.py
